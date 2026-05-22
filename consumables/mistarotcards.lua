@@ -85,12 +85,15 @@ BadDirector.MisprTarots {
     loc_vars = function(self, info_queue, card)
         local last_key = G.GAME.last_tarot_planet
         local last_c = last_key and G.P_CENTERS[last_key] or nil
-        local last_type = last_c and last_c.set or localize('k_what')
+        local last_type = last_c 
+		and ((last_c.set == "Tarot" 
+			or last_c.set == "Planet" 
+			or last_c.set == "Spectral")
+			and last_c.set 
+			or localize('k_'..last_c.set))
+		or localize('k_what')
 
-        local colour = (not last_c or last_c.name == 'The Fool') and G.C.RED or G.C.GREEN
-        if last_c and last_c.name ~= 'The Fool' then
-            info_queue[#info_queue + 1] = last_c
-        end
+        local colour = (not last_c) and G.C.RED or G.C.GREEN
 
         local main_end = {
             {
