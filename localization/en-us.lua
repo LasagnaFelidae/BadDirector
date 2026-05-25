@@ -151,6 +151,16 @@ return {
                     "be used immediately",
                 },
             },
+            bd_enhanced_info = {
+                name = "ced CardEnhan",
+                text = {
+                    "Misprinted {C:enhanced}Enhanced{}",
+                    "cards like:",
+                    "{C:attention}eel CardSt{}", 
+                    "{C:attention}ult CardM{},",
+                    "{C:attention}...{}",
+                },
+            },
 
         },
         Spectral = {
@@ -459,6 +469,37 @@ return {
                         "{X:mult,C:white}X#3#{} {C:inactive}Mult,{} {C:money}$#4#{}{C:inactive}){}"
                     }
                 }
+            },
+            j_bd_alberto = {
+                name = "Alberto",
+                text = {
+                    {
+                    "Held {C:attention}#2#s{} give",
+                    "{X:mult,C:white}X#1#{} Mult",
+                    },
+                    {
+                        "{C:attention}Rank{} changes every round",
+                    }
+                }
+            },
+            j_bd_bienvenues_batard_montrachet = {
+                name = {"1945","Grand Paladin"},
+                text = {
+                    "{X:blind,C:white}X#1#{} Blind",
+                    "when entering a blind",
+                    "{X:blind,C:white}+#2#{} xBlind",
+                    "at the end of round",
+                }
+            },
+            j_bd_marcel = {
+                name = "Misprint Marcel",
+                text = {
+                    "Gives {C:chips}+#1#{} Chips for",
+                    "each {C:attention}ced CardEnhan",
+                    "and {E:bd_glitched,C:dark_edition}Misprinted?{} card",
+                    "in your {C:attention}full deck",
+                    "{C:inactive}(Currently {C:chips}+#2#{C:inactive} Chips)",
+                },
             },
             -- Credit Localization
             j_bd_nxkoojoker = {
@@ -1197,6 +1238,7 @@ return {
                 }
             }
         },
+        
 
     },
     misc = {
